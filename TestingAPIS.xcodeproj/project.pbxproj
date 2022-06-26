@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74010284286865480015E88F /* Model_Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74010283286865480015E88F /* Model_Post.swift */; };
 		746DBBD12868610A00445905 /* TestingAPISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBD02868610A00445905 /* TestingAPISApp.swift */; };
 		746DBBD52868610D00445905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746DBBD42868610D00445905 /* Assets.xcassets */; };
 		746DBBD82868610D00445905 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746DBBD72868610D00445905 /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		74010282286861C70015E88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		74010283286865480015E88F /* Model_Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model_Post.swift; sourceTree = "<group>"; };
 		746DBBCD2868610A00445905 /* TestingAPIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingAPIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746DBBD02868610A00445905 /* TestingAPISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPISApp.swift; sourceTree = "<group>"; };
 		746DBBD42868610D00445905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				746DBBDF2868613800445905 /* ContentView_Post.swift */,
+				74010283286865480015E88F /* Model_Post.swift */,
 			);
 			path = "Post API";
 			sourceTree = "<group>";
@@ -92,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				746DBBE22868614000445905 /* DataService.swift */,
-				746DBBE32868614000445905 /* Model.swift */,
 				746DBBE42868614000445905 /* ViewModel.swift */,
+				746DBBE32868614000445905 /* Model.swift */,
 				746DBBE52868614000445905 /* NetworkingManger.swift */,
 				746DBBE62868614000445905 /* ContentView.swift */,
 			);
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				746DBBE92868614000445905 /* ViewModel.swift in Sources */,
+				74010284286865480015E88F /* Model_Post.swift in Sources */,
 				746DBBEA2868614000445905 /* NetworkingManger.swift in Sources */,
 				746DBBEB2868614000445905 /* ContentView.swift in Sources */,
 				746DBBE72868614000445905 /* DataService.swift in Sources */,
