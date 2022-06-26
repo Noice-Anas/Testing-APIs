@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		746DBBD12868610A00445905 /* TestingAPISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBD02868610A00445905 /* TestingAPISApp.swift */; };
-		746DBBD32868610A00445905 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBD22868610A00445905 /* ContentView.swift */; };
 		746DBBD52868610D00445905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746DBBD42868610D00445905 /* Assets.xcassets */; };
 		746DBBD82868610D00445905 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746DBBD72868610D00445905 /* Preview Assets.xcassets */; };
+		746DBBE02868613800445905 /* ContentView_Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBDF2868613800445905 /* ContentView_Post.swift */; };
+		746DBBE72868614000445905 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBE22868614000445905 /* DataService.swift */; };
+		746DBBE82868614000445905 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBE32868614000445905 /* Model.swift */; };
+		746DBBE92868614000445905 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBE42868614000445905 /* ViewModel.swift */; };
+		746DBBEA2868614000445905 /* NetworkingManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBE52868614000445905 /* NetworkingManger.swift */; };
+		746DBBEB2868614000445905 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DBBE62868614000445905 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74010282286861C70015E88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		746DBBCD2868610A00445905 /* TestingAPIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingAPIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746DBBD02868610A00445905 /* TestingAPISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPISApp.swift; sourceTree = "<group>"; };
-		746DBBD22868610A00445905 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		746DBBD42868610D00445905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		746DBBD72868610D00445905 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		746DBBDF2868613800445905 /* ContentView_Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView_Post.swift; sourceTree = "<group>"; };
+		746DBBE22868614000445905 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		746DBBE32868614000445905 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		746DBBE42868614000445905 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		746DBBE52868614000445905 /* NetworkingManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManger.swift; sourceTree = "<group>"; };
+		746DBBE62868614000445905 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,10 @@
 		746DBBCF2868610A00445905 /* TestingAPIS */ = {
 			isa = PBXGroup;
 			children = (
+				74010282286861C70015E88F /* Info.plist */,
 				746DBBD02868610A00445905 /* TestingAPISApp.swift */,
-				746DBBD22868610A00445905 /* ContentView.swift */,
+				746DBBE12868614000445905 /* Get API */,
+				746DBBDE2868613800445905 /* Post API */,
 				746DBBD42868610D00445905 /* Assets.xcassets */,
 				746DBBD62868610D00445905 /* Preview Content */,
 			);
@@ -65,6 +78,26 @@
 				746DBBD72868610D00445905 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		746DBBDE2868613800445905 /* Post API */ = {
+			isa = PBXGroup;
+			children = (
+				746DBBDF2868613800445905 /* ContentView_Post.swift */,
+			);
+			path = "Post API";
+			sourceTree = "<group>";
+		};
+		746DBBE12868614000445905 /* Get API */ = {
+			isa = PBXGroup;
+			children = (
+				746DBBE22868614000445905 /* DataService.swift */,
+				746DBBE32868614000445905 /* Model.swift */,
+				746DBBE42868614000445905 /* ViewModel.swift */,
+				746DBBE52868614000445905 /* NetworkingManger.swift */,
+				746DBBE62868614000445905 /* ContentView.swift */,
+			);
+			path = "Get API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				746DBBD32868610A00445905 /* ContentView.swift in Sources */,
+				746DBBE92868614000445905 /* ViewModel.swift in Sources */,
+				746DBBEA2868614000445905 /* NetworkingManger.swift in Sources */,
+				746DBBEB2868614000445905 /* ContentView.swift in Sources */,
+				746DBBE72868614000445905 /* DataService.swift in Sources */,
+				746DBBE02868613800445905 /* ContentView_Post.swift in Sources */,
 				746DBBD12868610A00445905 /* TestingAPISApp.swift in Sources */,
+				746DBBE82868614000445905 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +308,7 @@
 				DEVELOPMENT_TEAM = 826W4AQ3JG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestingAPIS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +338,7 @@
 				DEVELOPMENT_TEAM = 826W4AQ3JG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestingAPIS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

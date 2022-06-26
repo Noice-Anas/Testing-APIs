@@ -11,7 +11,16 @@ import SwiftUI
 struct TestingAPISApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                ZStack {
+                    Color.gray.opacity(0.8)
+                    ContentView()
+                }
+                ZStack {
+                    Color.gray.opacity(0.5)
+                    ContentView_Post()
+                }
+            }
         }
     }
 }

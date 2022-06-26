@@ -1,15 +1,19 @@
 //
 //  ContentView.swift
-//  TestingAPIS
+//  Testing APIs
 //
-//  Created by Noice_anas on 26/06/2022.
+//  Created by Noice_anas on 16/06/2022.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm = ViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
+        Text("\(vm.settings?.settingsDescription ?? "not working")")
+            .font(.system(size: 40, weight: .bold))
             .padding()
     }
 }
