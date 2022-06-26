@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm = ViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
+        Text("\(vm.settings?.settingsDescription ?? "not working")")
+            .font(.system(size: 40, weight: .bold))
             .padding()
     }
 }

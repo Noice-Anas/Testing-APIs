@@ -11,6 +11,10 @@
 		74700E4A285B5E96004D4139 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74700E49285B5E96004D4139 /* ContentView.swift */; };
 		74700E4C285B5E9B004D4139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74700E4B285B5E9B004D4139 /* Assets.xcassets */; };
 		74700E4F285B5E9B004D4139 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74700E4E285B5E9B004D4139 /* Preview Assets.xcassets */; };
+		74700E56285B5EB1004D4139 /* NetworkingManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74700E55285B5EB1004D4139 /* NetworkingManger.swift */; };
+		74700E58285B5EBC004D4139 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74700E57285B5EBC004D4139 /* DataService.swift */; };
+		74700E5A285B5EC5004D4139 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74700E59285B5EC5004D4139 /* Model.swift */; };
+		74700E5C285B615D004D4139 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74700E5B285B615D004D4139 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		74700E49285B5E96004D4139 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74700E4B285B5E9B004D4139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74700E4E285B5E9B004D4139 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74700E55285B5EB1004D4139 /* NetworkingManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManger.swift; sourceTree = "<group>"; };
+		74700E57285B5EBC004D4139 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		74700E59285B5EC5004D4139 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		74700E5B285B615D004D4139 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		74700E5D285B62C3004D4139 /* Testing-APIs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Testing-APIs-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,13 @@
 		74700E46285B5E96004D4139 /* Testing APIs */ = {
 			isa = PBXGroup;
 			children = (
+				74700E5D285B62C3004D4139 /* Testing-APIs-Info.plist */,
 				74700E47285B5E96004D4139 /* Testing_APIsApp.swift */,
 				74700E49285B5E96004D4139 /* ContentView.swift */,
+				74700E5B285B615D004D4139 /* ViewModel.swift */,
+				74700E57285B5EBC004D4139 /* DataService.swift */,
+				74700E59285B5EC5004D4139 /* Model.swift */,
+				74700E55285B5EB1004D4139 /* NetworkingManger.swift */,
 				74700E4B285B5E9B004D4139 /* Assets.xcassets */,
 				74700E4D285B5E9B004D4139 /* Preview Content */,
 			);
@@ -137,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74700E58285B5EBC004D4139 /* DataService.swift in Sources */,
+				74700E5C285B615D004D4139 /* ViewModel.swift in Sources */,
 				74700E4A285B5E96004D4139 /* ContentView.swift in Sources */,
+				74700E56285B5EB1004D4139 /* NetworkingManger.swift in Sources */,
 				74700E48285B5E96004D4139 /* Testing_APIsApp.swift in Sources */,
+				74700E5A285B5EC5004D4139 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +288,8 @@
 				DEVELOPMENT_TEAM = 826W4AQ3JG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Testing-APIs-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +319,8 @@
 				DEVELOPMENT_TEAM = 826W4AQ3JG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Testing-APIs-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
