@@ -22,7 +22,9 @@ struct ContentView_Post: View {
             }
             Button {
                 Task {
-                    await postFUNCTION()
+                    await postTo(urlString: "https://reqres.in/api/testing", item: itemToPost, responseType: itemToPost, completionHandler: { data in
+                        print(data.addCarDescription ?? "something went wrong")
+                    })
                 }
             } label: {
                 Text("POST")
@@ -34,23 +36,26 @@ struct ContentView_Post: View {
         }
     }
     
-    func postFUNCTION() async {
-        guard let encoded = try? JSONEncoder().encode(itemToPost) else {
+    func postTo<typeOfItem: Codable, typeOfResponse: Codable>(urlString: String, item: typeOfItem, responseType: typeOfResponse, completionHandler: @escaping (typeOfResponse) -> ()) async {
+        //First step: encode the item to be able to send it to the API
+        guard let encoded = try? JSONEncoder().encode(item) else {
             print("⚠️ Failed to encode Model")
             return
         }
-        
-        let url = URL(string: "https://reqres.in/api/testing")!
+        //Second step: configure the POST url request
+        guard let url = URL(string: urlString) else {
+            print("⚠️ wrong URL to post")
+            return
+        }
         var urlRequest = URLRequest(url: url)
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = "POST"
-        
-        
+        //Third step: post the data to the API call and receive a response
         do {
             let (data, _) = try await URLSession.shared.upload(for: urlRequest, from: encoded)
             //handle the result
-            let decoded = try JSONDecoder().decode(AddCar.self, from: data)
-            print(decoded.addCarDescription ?? "something went wrong 🔺")
+            let decoded = try JSONDecoder().decode(typeOfResponse.self, from: data)
+            completionHandler(decoded)
             
         } catch {
             print("⚠️ there has been a URLSession ERROR \(error.localizedDescription)")
