@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView_Post: View {
     
-    let itemToPost = AddCar.init(customerID: 1, makeID: 1, name: "Noice car", modelID: 1, addCarDescription: "This is the first car", year: 2000, registrationNo: "ABC-1004", imagePath: "", statusID: 1)
+    let itemToPost = AddCar.init(customerID: 1, makeID: 1, name: "Noice car", modelID: 1, addCarDescription: "This is the first car", year: 2000, registrationNo: "ABC-1204", imagePath: "", statusID: 1)
     
     var body: some View {
         VStack(spacing: 20) {
@@ -22,8 +22,8 @@ struct ContentView_Post: View {
             }
             Button {
                 Task {
-                    await postTo(urlString: "https://reqres.in/api/testing", item: itemToPost, responseType: itemToPost, completionHandler: { data in
-                        print(data.addCarDescription ?? "something went wrong")
+                    await postTo(urlString: "http://apicustomer-uat.garage.sa/api/add/car", item: itemToPost, responseType: ResponseModel.self, completionHandler: { data in
+                        print(data.responseModelDescription ?? "something went wrong ")
                     })
                 }
             } label: {
@@ -36,7 +36,7 @@ struct ContentView_Post: View {
         }
     }
     
-    func postTo<typeOfItem: Codable, typeOfResponse: Codable>(urlString: String, item: typeOfItem, responseType: typeOfResponse, completionHandler: @escaping (typeOfResponse) -> ()) async {
+    func postTo<typeOfItem: Codable, typeOfResponse: Codable>(urlString: String, item: typeOfItem, responseType: typeOfResponse.Type, completionHandler: @escaping (typeOfResponse) -> ()) async {
         //First step: encode the item to be able to send it to the API
         guard let encoded = try? JSONEncoder().encode(item) else {
             print("⚠️ Failed to encode Model")
